@@ -3,10 +3,9 @@
 /* Imports */
 require_once("../../../config.php");
 require_once($CFG->dirroot.'/repository/lib.php');
-<<<<<<< HEAD
+
 require_once("./lib.php");
-=======
->>>>>>> master
+
 require_once('./editimage_form.php');
 
 /* Script settings */
