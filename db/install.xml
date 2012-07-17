@@ -20,7 +20,7 @@
     </TABLE>
     <TABLE NAME="format_grid_summary" COMMENT="A table to hold a single flag on whether to show section 0 above the grid or in the grid" PREVIOUS="format_grid_icon">
       <FIELDS>
-        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true" NEXT="showsummary"/>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="true" NEXT="show_summary"/>
         <FIELD NAME="show_summary" TYPE="int" LENGTH="1" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" COMMENT="Flag whether the course administrator wants section 0 to be shown or hidden in the grid" PREVIOUS="id" NEXT="course_id"/>
         <FIELD NAME="course_id" TYPE="int" LENGTH="10" NOTNULL="true" UNSIGNED="true" SEQUENCE="false" PREVIOUS="show_summary"/>
       </FIELDS>
