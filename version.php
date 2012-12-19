@@ -38,4 +38,4 @@ $plugin->component = 'format_grid';
 $plugin->release  = MATURITY_BETA;
 
 // User-friendly version number
-$plugin->maturity = '2.3.1 (2012062501.03)';
+$plugin->maturity = '2.3.2';
