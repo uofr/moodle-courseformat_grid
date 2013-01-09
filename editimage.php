@@ -1,16 +1,10 @@
 <?php
 
 /* Imports */
-<<<<<<< HEAD
-require_once("../../../config.php");
-require_once($CFG->dirroot . '/repository/lib.php');
-require_once('./editimage_form.php');
-=======
 require_once('../../../config.php');
 require_once($CFG->dirroot . '/repository/lib.php');
 require_once($CFG->dirroot . '/course/format/grid/editimage_form.php');
 require_once($CFG->libdir . '/gdlib.php');
->>>>>>> Fixing bad merge request
 
 /* Script settings */
 define('GRID_ITEM_IMAGE_WIDTH', 210);
@@ -36,11 +30,7 @@ $url = new moodle_url('/course/format/grid/editimage.php', array(
             'userid' => $formdata->userid,
             'mode' => $formdata->mode));
 
-<<<<<<< HEAD
-/* No exactly sure what this stuff does, but it seems fairly straightforward */
-=======
 /* Not exactly sure what this stuff does, but it seems fairly straightforward */
->>>>>>> Fixing bad merge request
 list($context, $course, $cm) = get_context_info_array($contextid);
 
 require_login($course, true, $cm);
@@ -58,11 +48,7 @@ $options = array(
     'accepted_types' => array('web_image'),
     'return_types' => FILE_INTERNAL);
 
-<<<<<<< HEAD
-$mform = new image_form(null, array(
-=======
 $mform = new grid_image_form(null, array(
->>>>>>> Fixing bad merge request
             'contextid' => $contextid,
             'userid' => $formdata->userid,
             'sectionid' => $sectionid,
@@ -73,13 +59,6 @@ if ($mform->is_cancelled()) {
     redirect(new moodle_url($CFG->wwwroot . '/course/view.php?id=' . $course->id));
 } else if ($formdata = $mform->get_data()) { //Form has been submitted    
     $fs = get_file_storage();
-<<<<<<< HEAD
-    $fs->delete_area_files($context->id, 'course', 'section', $sectionid);
-
-    if ($newfilename = $mform->get_new_filename('icon_file')) {
-        /* Resize the new image and save it */
-=======
->>>>>>> Fixing bad merge request
 
     if ($newfilename = $mform->get_new_filename('icon_file')) {
         // We have a new file so can delete the old....
@@ -100,27 +79,6 @@ if ($mform->is_cancelled()) {
                 'icon_file', $storedfile_record['contextid'], $storedfile_record['component'], $storedfile_record['filearea'], $storedfile_record['itemid'], $storedfile_record['filepath'], 'temp.' . $storedfile_record['filename'], true);
 
         try {
-<<<<<<< HEAD
-            // Ensure the right quality setting...
-            switch ($temp_file->get_mimetype()) {
-                case 'image/jpeg':
-                    $quality = 75;
-                    break;
-
-                case 'image/png':
-                    $quality = 3;
-                    break;
-
-                default:
-                    $quality = null;
-            }
-            $fs->convert_image($storedfile_record, $temp_file, GRID_ITEM_IMAGE_WIDTH, GRID_ITEM_IMAGE_HEIGHT, true, $quality);
-
-            $temp_file->delete();
-            unset($temp_file);
-
-            $DB->set_field('format_grid_icon', 'imagepath', $newfilename, array('sectionid' => $sectionid));
-=======
             $convert_success = true;
             // Ensure the right quality setting...
             $mime = $temp_file->get_mimetype();
@@ -157,7 +115,6 @@ if ($mform->is_cancelled()) {
             } else {
                 print_error('imagecannotbeusedasanicon', 'format_grid', $CFG->wwwroot . "/course/view.php?id=" . $course->id);
             }
->>>>>>> Fixing bad merge request
         } catch (Exception $e) {
             if (isset($temp_file)) {
                 $temp_file->delete();
