@@ -29,7 +29,7 @@ defined('MOODLE_INTERNAL') || die();
 $plugin->version  = 2012082200;
 
 // Required Moodle version
-$plugin->requires = 2012062501.03; // 2.3.1 (Build: 20120719) - Because of MDL-33767.
+$plugin->requires = 2012120300.00; // 2.4 (Build: 20121203)
 
 // Full name of the plugin (used for diagnostics)
 $plugin->component = 'format_grid';
@@ -38,4 +38,8 @@ $plugin->component = 'format_grid';
 $plugin->maturity = MATURITY_BETA;
 
 // User-friendly version number
-$plugin->release = '2.3.2.1';
+<<<<<<< HEAD
+$plugin->release = '2.3.2';
+=======
+$plugin->release = '2.4.0.5';
+>>>>>>> Fixing bad merge request
