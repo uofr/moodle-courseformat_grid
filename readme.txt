@@ -94,3 +94,8 @@ HISTORY
 
 21st December 2012 - Version 2.3.2.1
 1. Fixed BOM (http://docs.moodle.org/23/en/UTF-8_and_BOM) issue in 'lib.php' and 'lang/ru/format_grid.php' which can cause the icons not to display.
+
+12th January 2013 - Version 2.3.2.2
+1. Fixed inadvertent application of 2.4 code.
+2. Fixed issue in editimage.php where the GD library needs to be used for image conversion for transparent PNG's.
+3. Perform a 'Purge all caches' under 'Home -> Site administration -> Development -> Purge all caches' after this is installed.
