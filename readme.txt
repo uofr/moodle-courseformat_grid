@@ -2,7 +2,7 @@ GRID COURSE FORMAT
 ============================
 Package tested in: Moodle 2.3.1+ (Build: 20120802) 2012062501.07
 
-Requires at least 2012062501.03 because of MDL-33767.
+Requires at least Moodle 2.3.1 (Build: 20120719) version 2012062501.03 because of MDL-33767.
 
 BETA DEVELOPMENT VERSION - NOT FOR PRODUCTION SITES - Please place comments / feedback on:
 http://tracker.moodle.org/browse/CONTRIB-3769 - preferred.
