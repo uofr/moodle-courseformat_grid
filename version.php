@@ -15,27 +15,29 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Version details
+ * Grid Format - A topics based format that uses a grid of user selectable images to popup a light box of the section.
  *
- * @package    format
+ * @package    course/format
  * @subpackage grid
- * @copyright  1999 onwards Martin Dougiamas (http://dougiamas.com)
+ * @copyright  &copy; 2012 G J Barnard in respect to modifications of standard topics format.
+ * @author     G J Barnard - gjbarnard at gmail dot com and {@link http://moodle.org/user/profile.php?id=442195}
+ * @author     Based on code originally written by Paul Krix and Julian Ridden.
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
 // Plugin version (update when tables change)
-$plugin->version  = 2012082200;
+$plugin->version = 2013051400;
 
 // Required Moodle version
-$plugin->requires = 2012120301.02; // 2.4.1+ (Build: 20130118)
+$plugin->requires = 2013051400.00; // 2.5 (Build: 20130514).
 
 // Full name of the plugin (used for diagnostics)
 $plugin->component = 'format_grid';
 
 // Software maturity level
-$plugin->maturity  = MATURITY_BETA;
+$plugin->maturity = MATURITY_STABLE;
 
 // User-friendly version number
-$plugin->release = '2.4.0.6';
+$plugin->release = '2.5.1';
